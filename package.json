@@ -1,0 +1,54 @@
+{
+  "name": "character-entities",
+  "version": "0.0.0",
+  "description": "HTML character entity information",
+  "license": "MIT",
+  "keywords": [
+    "html",
+    "entity",
+    "entities",
+    "character",
+    "reference",
+    "name",
+    "replacement"
+  ],
+  "files": [
+    "index.js",
+    "index.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wooorm/character-entities.git"
+  },
+  "author": "Titus Wormer <tituswormer@gmail.com>",
+  "devDependencies": {
+    "browserify": "^11.0.0",
+    "eslint": "^1.0.0",
+    "esmangle": "^1.0.0",
+    "istanbul": "^0.3.0",
+    "jscs": "^2.0.0",
+    "jscs-jsdoc": "^1.0.0",
+    "mdast": "^2.0.0",
+    "mdast-comment-config": "^1.0.0",
+    "mdast-github": "^1.0.0",
+    "mdast-lint": "^1.0.0",
+    "mdast-slug": "^2.0.0",
+    "mdast-validate-links": "^1.1.1",
+    "mdast-yaml-config": "^1.0.0",
+    "tape": "^4.2.0"
+  },
+  "scripts": {
+    "build-md": "mdast . --quiet --frail",
+    "build-crawl": "curl https://html.spec.whatwg.org/entities.json > data/entities.json",
+    "build-generate": "node script/generate.js",
+    "build-bundle": "browserify index.js --bare -s characterEntities > character-entities.js",
+    "build-mangle": "esmangle character-entities.js > character-entities.min.js",
+    "build": "npm run build-md && npm run build-crawl && npm run build-generate && npm run build-bundle && npm run build-mangle",
+    "lint-api": "eslint .",
+    "lint-style": "jscs --reporter inline .",
+    "lint": "npm run lint-api && npm run lint-style",
+    "test-api": "node test.js",
+    "test-coverage": "istanbul cover test.js",
+    "test": "npm run build && npm run lint && npm run test-coverage"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "character-entities",
+  "main": "character-entities.js",
+  "description": "HTML character entity information",
+  "license": "MIT",
+  "keywords": [
+    "html",
+    "entity",
+    "entities",
+    "character",
+    "reference",
+    "name",
+    "replacement"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wooorm/character-entities.git"
+  },
+  "authors": [
+    "Titus Wormer <tituswormer@gmail.com>"
+  ],
+  "ignore": [
+    ".*",
+    "*.log",
+    "*.md",
+    "build/",
+    "data/",
+    "components/",
+    "coverage/",
+    "node_modules/",
+    "script/",
+    "build.js",
+    "example.js",
+    "index.js",
+    "test.js",
+    "component.json",
+    "package.json"
+  ]
+}
