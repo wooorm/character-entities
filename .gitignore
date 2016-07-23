@@ -1,9 +1,8 @@
 .DS_Store
 *.log
-build/
-bower_components/
-components/
+.nyc_output/
 coverage/
-node_modules/
-build.js
 data/
+node_modules/
+character-entities.js
+character-entities.min.js

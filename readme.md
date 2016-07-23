@@ -1,19 +1,16 @@
-# character-entities [![Build Status](https://img.shields.io/travis/wooorm/character-entities.svg?style=flat)](https://travis-ci.org/wooorm/character-entities) [![Coverage Status](https://img.shields.io/codecov/c/github/wooorm/character-entities.svg)](https://codecov.io/github/wooorm/character-entities)
+# character-entities [![Build Status][travis-badge]][travis] [![Coverage Status][codecov-badge]][codecov]
+
+<!--lint disable heading-increment list-item-spacing no-duplicate-headings-->
 
 HTML character entity information.
 
 ## Installation
 
-[npm](https://docs.npmjs.com/cli/install):
+[npm][npm-install]:
 
 ```bash
 npm install character-entities
 ```
-
-**character-entities** is also available for
-[bower](http://bower.io/#install-packages), [duo](http://duojs.org/#getting-started),
-and for AMD, CommonJS, and globals ([uncompressed](character-entities.js) and
-[compressed](character-entities.min.js)).
 
 ## Usage
 
@@ -31,8 +28,26 @@ Mapping between (case-sensitive) character entity names to replacements.
 
 ## Support
 
-See [html.spec.whatwg.org](https://html.spec.whatwg.org/multipage/syntax.html#named-character-references).
+See [html.spec.whatwg.org][html].
 
 ## License
 
-[MIT](LICENSE) © [Titus Wormer](http://wooorm.com)
+[MIT][license] © [Titus Wormer][author]
+
+<!-- Definitions -->
+
+[travis-badge]: https://img.shields.io/travis/wooorm/character-entities.svg
+
+[travis]: https://travis-ci.org/wooorm/character-entities
+
+[codecov-badge]: https://img.shields.io/codecov/c/github/wooorm/character-entities.svg
+
+[codecov]: https://codecov.io/github/wooorm/character-entities
+
+[npm-install]: https://docs.npmjs.com/cli/install
+
+[license]: LICENSE
+
+[author]: http://wooorm.com
+
+[html]: https://html.spec.whatwg.org/multipage/syntax.html#named-character-references

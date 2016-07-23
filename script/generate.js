@@ -10,25 +10,20 @@
 
 /* eslint-env node */
 
+/* Dependencies. */
 var fs = require('fs');
 var path = require('path');
 var data = require('../data/entities');
 
-/*
- * Transform.
- */
-
+/* Transform. */
 var entities = {};
 var key;
 
 for (key in data) {
-    entities[key.slice(1, -1)] = data[key].characters;
+  entities[key.slice(1, -1)] = data[key].characters;
 }
 
-/*
- * Write.
- */
-
+/* Write. */
 entities = JSON.stringify(entities, 0, 2) + '\n';
 
 fs.writeFileSync(path.join(__dirname, '..', 'index.json'), entities);
