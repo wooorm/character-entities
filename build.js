@@ -12,8 +12,7 @@
 
 /* Dependencies. */
 var fs = require('fs');
-var path = require('path');
-var data = require('../data/entities');
+var data = require('./data/entities');
 
 /* Transform. */
 var entities = {};
@@ -26,4 +25,4 @@ for (key in data) {
 /* Write. */
 entities = JSON.stringify(entities, 0, 2) + '\n';
 
-fs.writeFileSync(path.join(__dirname, '..', 'index.json'), entities);
+fs.writeFileSync('index.json', entities);
