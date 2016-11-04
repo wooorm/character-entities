@@ -2,7 +2,6 @@
 *.log
 .nyc_output/
 coverage/
-data/
 node_modules/
 character-entities.js
 character-entities.min.js

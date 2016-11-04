@@ -1,18 +1,24 @@
 'use strict';
 
-/* Dependencies. */
 var fs = require('fs');
-var data = require('./data/entities');
+var https = require('https');
+var bail = require('bail');
+var concat = require('concat-stream');
 
-/* Transform. */
-var entities = {};
-var key;
+https.get('https://html.spec.whatwg.org/entities.json', function (res) {
+  res
+    .pipe(concat(function (data) {
+      var entities = {};
 
-for (key in data) {
-  entities[key.slice(1, -1)] = data[key].characters;
-}
+      data = JSON.parse(data);
 
-/* Write. */
-entities = JSON.stringify(entities, 0, 2) + '\n';
+      Object.keys(data).forEach(function (key) {
+        entities[key.slice(1, -1)] = data[key].characters;
+      });
 
-fs.writeFileSync('index.json', entities);
+      data = JSON.stringify(entities, 0, 2);
+
+      fs.writeFile('index.json', data + '\n', bail);
+    }))
+    .on('error', bail);
+});
