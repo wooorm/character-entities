@@ -1,12 +1,10 @@
 # character-entities [![Build Status][travis-badge]][travis]
 
-<!--lint disable heading-increment list-item-spacing no-duplicate-headings-->
-
 HTML character entity information.
 
 ## Installation
 
-[npm][npm-install]:
+[npm][]:
 
 ```bash
 npm install character-entities
@@ -15,9 +13,9 @@ npm install character-entities
 ## Usage
 
 ```js
-console.log(characterEntities.AElig); // Æ
-console.log(characterEntities.aelig); // æ
-console.log(characterEntities.amp); // &
+console.log(characterEntities.AElig); //=> 'Æ'
+console.log(characterEntities.aelig); //=> 'æ'
+console.log(characterEntities.amp); //=> '&'
 ```
 
 ## API
@@ -40,7 +38,7 @@ See [html.spec.whatwg.org][html].
 
 [travis]: https://travis-ci.org/wooorm/character-entities
 
-[npm-install]: https://docs.npmjs.com/cli/install
+[npm]: https://docs.npmjs.com/cli/install
 
 [license]: LICENSE
 
