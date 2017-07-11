@@ -1,4 +1,4 @@
-# character-entities [![Build Status][travis-badge]][travis] [![Coverage Status][codecov-badge]][codecov]
+# character-entities [![Build Status][travis-badge]][travis]
 
 <!--lint disable heading-increment list-item-spacing no-duplicate-headings-->
 
@@ -39,10 +39,6 @@ See [html.spec.whatwg.org][html].
 [travis-badge]: https://img.shields.io/travis/wooorm/character-entities.svg
 
 [travis]: https://travis-ci.org/wooorm/character-entities
-
-[codecov-badge]: https://img.shields.io/codecov/c/github/wooorm/character-entities.svg
-
-[codecov]: https://codecov.io/github/wooorm/character-entities
 
 [npm-install]: https://docs.npmjs.com/cli/install
 
