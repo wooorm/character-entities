@@ -28,6 +28,17 @@ Mapping between (case-sensitive) character entity names to replacements.
 
 See [html.spec.whatwg.org][html].
 
+## Related
+
+*   [`character-entities-html4`](https://github.com/wooorm/character-entities-html4)
+    — HTML 4 character entity info
+*   [`character-entities-legacy`](https://github.com/wooorm/character-entities-legacy)
+    — Legacy character entity info
+*   [`parse-entities`](https://github.com/wooorm/parse-entities)
+    — Parse HTML character references
+*   [`stringify-entities`](https://github.com/wooorm/stringify-entities)
+    — Stringify HTML character references
+
 ## License
 
 [MIT][license] © [Titus Wormer][author]
