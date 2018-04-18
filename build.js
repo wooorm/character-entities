@@ -1,24 +1,26 @@
-'use strict';
+'use strict'
 
-var fs = require('fs');
-var https = require('https');
-var bail = require('bail');
-var concat = require('concat-stream');
+var fs = require('fs')
+var https = require('https')
+var bail = require('bail')
+var concat = require('concat-stream')
 
-https.get('https://html.spec.whatwg.org/entities.json', function (res) {
-  res.pipe(concat(onconcat)).on('error', bail);
+https.get('https://html.spec.whatwg.org/entities.json', onconnection)
 
-  function onconcat(data) {
-    var entities = {};
+function onconnection(res) {
+  res.pipe(concat(onconcat)).on('error', bail)
+}
 
-    data = JSON.parse(data);
+function onconcat(data) {
+  var entities = {}
 
-    Object.keys(data).forEach(function (key) {
-      entities[key.slice(1, -1)] = data[key].characters;
-    });
+  data = JSON.parse(data)
 
-    data = JSON.stringify(entities, 0, 2);
+  Object.keys(data).forEach(function(key) {
+    entities[key.slice(1, -1)] = data[key].characters
+  })
 
-    fs.writeFile('index.json', data + '\n', bail);
-  }
-});
+  data = JSON.stringify(entities, null, 2)
+
+  fs.writeFile('index.json', data + '\n', bail)
+}
