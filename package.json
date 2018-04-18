@@ -12,7 +12,7 @@
     "name",
     "replacement"
   ],
-  "repository": "https://github.com/wooorm/character-entities",
+  "repository": "wooorm/character-entities",
   "bugs": "https://github.com/wooorm/character-entities/issues",
   "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "contributors": [
