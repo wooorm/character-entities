@@ -1,14 +1,14 @@
 language: node_js
 node_js:
-- lts/boron
-- node
+  - lts/dubnium
+  - node
 deploy:
   provider: releases
   skip_cleanup: true
   api_key:
-    secure: tDXq0Mkaf+cxtptSbQil2MnQxn44il8ODT0jgxXjbtz9dLHvt7rZW+914KDl3absCt1y5DCdjodBPa6Ds87E5B2+dpiFh/FniYeBSx4OSNPLKtMQkAPMTafmHS/Bs/cDx1MSFjCMnH+BOu/6XJKsyMNfxcoNap0cLyJbUFc+3b9QPB11M8UC8TosUBMXsJlXy4WOp/VHmSJhJgGlicxlDgxCMr737LqrXqtvwVyM+DZqcVTvC7eplDQPZobw+jm3WZaaNGl+ghdzH/vGYhAomT0rGwoiPr8p6awxMvIxUt/DMO6xd56tNMcLbunVvAKyPPxHR8gxFN1Edow22yO/mRxhRKe+2T+fMxh3mSrlLF5ZntBQgPsZCtndCAfAv8al9FvSLqHwqEcNT53sUhvGKCFJUGumAC0OnDLesYge+DDD5HMaWrYtcgZL0Ldqa4dA7jrFPSFTOwPNNMGfWK0USGUKd1q5JtVtZhXLNensLqWzQ1p5GJG1dIxaz05Y3Rvz3S48yJlA0i/v7aE/ipGmxN08lbxmY8HZESPrlUhso60vrvbrx2mrQD8ImQNNq+Ov9f+q5R5855jjMGby7Ga7xXa0sHq38Kbh6RFCzED78Xkk2JCM0BLKPJkaqZWNWr6Qe72v/nZ/a6JDXctvFQaL/aPvIK5Okl4SGk+mAzZO4pU=
+    secure: M1n2TapSCVmqa42zbx1Mzj27vPRugFZM0AS8ewUKEak8in+oP7szvZKVvpXsFOFFlikhZDCXeKvgINvPGJ6VcE//vZQMuJV87/tJBVslynh9CCOMLfkay5pEdZ6/u3ttUKbSpp9q/b6jtcmhly+JDVX/moRBEM6/s1Z9coFgClkv40xLDS3xghM6TtVqkhDoxVYQ6ezDx4+cz2A5gxh+gA5NUU5lDHKjYuh8nBMBMKmNjRPDD5Is+VDRrgTBLNTDuyzDKCvdrcbL1X0DH8gpVfpBRjf84FL0jU6RHNFKuggnDfmYoqDNQyI5OZ8YEe3V94nyp73B82zNhWgGzoVTIKoeARLW403BH5HDQOW+6shVmO3cqsv2ua9f90AblFF2yKu/Lb2IBYlBGhLDRWQlT4B7rFTwOAIpAacBH79NcdL5gFN9BXngxh0skLgzNimNerjAL3x6ZpRWiNx7CtgvzhyI2dTcIfviuYgxd7HfDOqtdWSBMwU6GwGz97rL5VuKv/c/05N9zVADEH5wh5U1bFATWICmfDZFC3jrAuNOcB87R+5b8Qfv04z2Ct6O0ohwq3ieWcQzqBGdOgc37EhjBUS89NLXtqX9pZxYqGq2fQamQuUPsQdShjIj1cS93yA4tuBUCo4foM6iCE+HnZ6yx8IiQNxv+2WG37MI2mjoz0U=
   file:
-    - "character-entities.js"
-    - "character-entities.min.js"
+    - 'character-entities.js'
+    - 'character-entities.min.js'
   on:
     tags: true
