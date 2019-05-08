@@ -55,6 +55,6 @@ See [html.spec.whatwg.org][html].
 
 [license]: license
 
-[author]: http://wooorm.com
+[author]: https://wooorm.com
 
 [html]: https://html.spec.whatwg.org/multipage/syntax.html#named-character-references
