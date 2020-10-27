@@ -1,2 +1,4 @@
 character-entities.js
 character-entities.min.js
+*.json
+*.md
