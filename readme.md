@@ -1,12 +1,16 @@
 # character-entities
 
 [![Build][build-badge]][build]
+[![Coverage][coverage-badge]][coverage]
 [![Downloads][downloads-badge]][downloads]
 [![Size][size-badge]][size]
 
 HTML character entity information.
 
 ## Install
+
+This package is ESM only: Node 12+ is needed to use it and it must be `import`ed
+instead of `require`d.
 
 [npm][]:
 
@@ -16,8 +20,11 @@ npm install character-entities
 
 ## Use
 
+This package exports the following identifiers: `characterEntities`.
+There is no default export.
+
 ```js
-var characterEntities = require('character-entities')
+import {characterEntities} from 'character-entities'
 
 console.log(characterEntities.AElig) // => 'Æ'
 console.log(characterEntities.aelig) // => 'æ'
@@ -54,6 +61,10 @@ See [`html.spec.whatwg.org`][html].
 [build-badge]: https://github.com/wooorm/character-entities/workflows/main/badge.svg
 
 [build]: https://github.com/wooorm/character-entities/actions
+
+[coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/longest-streak.svg
+
+[coverage]: https://codecov.io/github/wooorm/longest-streak
 
 [downloads-badge]: https://img.shields.io/npm/dm/character-entities.svg
 

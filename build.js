@@ -1,9 +1,7 @@
-'use strict'
-
-var fs = require('fs')
-var https = require('https')
-var bail = require('bail')
-var concat = require('concat-stream')
+import fs from 'fs'
+import https from 'https'
+import bail from 'bail'
+import concat from 'concat-stream'
 
 var own = {}.hasOwnProperty
 
@@ -25,7 +23,11 @@ function onconcat(data) {
     }
   }
 
-  data = JSON.stringify(entities, null, 2)
-
-  fs.writeFile('index.json', data + '\n', bail)
+  fs.writeFile(
+    'index.js',
+    'export var characterEntities = ' +
+      JSON.stringify(entities, null, 2) +
+      '\n',
+    bail
+  )
 }

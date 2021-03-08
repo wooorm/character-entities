@@ -1,6 +1,5 @@
 .DS_Store
 *.log
+coverage/
 node_modules/
-character-entities.js
-character-entities.min.js
 yarn.lock
