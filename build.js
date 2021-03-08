@@ -5,6 +5,8 @@ var https = require('https')
 var bail = require('bail')
 var concat = require('concat-stream')
 
+var own = {}.hasOwnProperty
+
 https.get('https://html.spec.whatwg.org/entities.json', onconnection)
 
 function onconnection(response) {
@@ -13,12 +15,15 @@ function onconnection(response) {
 
 function onconcat(data) {
   var entities = {}
+  var key
 
   data = JSON.parse(data)
 
-  Object.keys(data).forEach(function (key) {
-    entities[key.slice(1, -1)] = data[key].characters
-  })
+  for (key in data) {
+    if (own.call(data, key)) {
+      entities[key.slice(1, -1)] = data[key].characters
+    }
+  }
 
   data = JSON.stringify(entities, null, 2)
 
