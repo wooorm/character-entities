@@ -51,9 +51,9 @@ See [`html.spec.whatwg.org`][html].
 
 <!-- Definitions -->
 
-[build-badge]: https://img.shields.io/travis/wooorm/character-entities.svg
+[build-badge]: https://github.com/wooorm/character-entities/workflows/main/badge.svg
 
-[build]: https://travis-ci.org/wooorm/character-entities
+[build]: https://github.com/wooorm/character-entities/actions
 
 [downloads-badge]: https://img.shields.io/npm/dm/character-entities.svg
 
