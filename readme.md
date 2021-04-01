@@ -20,9 +20,6 @@ npm install character-entities
 
 ## Use
 
-This package exports the following identifiers: `characterEntities`.
-There is no default export.
-
 ```js
 import {characterEntities} from 'character-entities'
 
@@ -32,6 +29,9 @@ console.log(characterEntities.amp) // => '&'
 ```
 
 ## API
+
+This package exports the following identifiers: `characterEntities`.
+There is no default export.
 
 ### characterEntities
 
