@@ -9,11 +9,16 @@ https.get('https://html.spec.whatwg.org/entities.json', (response) => {
   response.pipe(concatStream(onconcat)).on('error', bail)
 })
 
-function onconcat(data) {
+/**
+ * @param {Buffer} buf
+ */
+function onconcat(buf) {
+  /** @type {Record<string, {codepoints: number[], characters: string}>} */
+  const data = JSON.parse(String(buf))
+  /** @type {Record<string, string>} */
   const entities = {}
+  /** @type {string} */
   let key
-
-  data = JSON.parse(data)
 
   for (key in data) {
     if (own.call(data, key)) {
@@ -23,9 +28,15 @@ function onconcat(data) {
 
   fs.writeFile(
     'index.js',
-    'export const characterEntities = ' +
-      JSON.stringify(entities, null, 2) +
-      '\n',
+    [
+      '/**',
+      ' * Map of named character references.',
+      ' *',
+      ' * @type {Record<string, string>}',
+      ' */',
+      'export const characterEntities = ' + JSON.stringify(entities, null, 2),
+      ''
+    ].join('\n'),
     bail
   )
 }

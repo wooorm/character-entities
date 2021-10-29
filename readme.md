@@ -5,7 +5,7 @@
 [![Downloads][downloads-badge]][downloads]
 [![Size][size-badge]][size]
 
-HTML character entity information.
+Map of named character references.
 
 ## Install
 
