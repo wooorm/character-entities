@@ -1,4 +1,4 @@
-export var characterEntities = {
+export const characterEntities = {
   AEli: 'Æ',
   AElig: 'Æ',
   AM: '&',

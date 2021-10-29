@@ -1,9 +1,9 @@
-import fs from 'fs'
-import https from 'https'
-import bail from 'bail'
+import fs from 'node:fs'
+import https from 'node:https'
+import {bail} from 'bail'
 import concat from 'concat-stream'
 
-var own = {}.hasOwnProperty
+const own = {}.hasOwnProperty
 
 https.get('https://html.spec.whatwg.org/entities.json', onconnection)
 
@@ -12,8 +12,8 @@ function onconnection(response) {
 }
 
 function onconcat(data) {
-  var entities = {}
-  var key
+  const entities = {}
+  let key
 
   data = JSON.parse(data)
 
@@ -25,7 +25,7 @@ function onconcat(data) {
 
   fs.writeFile(
     'index.js',
-    'export var characterEntities = ' +
+    'export const characterEntities = ' +
       JSON.stringify(entities, null, 2) +
       '\n',
     bail
