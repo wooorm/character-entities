@@ -1,15 +1,13 @@
 import fs from 'node:fs'
 import https from 'node:https'
 import {bail} from 'bail'
-import concat from 'concat-stream'
+import concatStream from 'concat-stream'
 
 const own = {}.hasOwnProperty
 
-https.get('https://html.spec.whatwg.org/entities.json', onconnection)
-
-function onconnection(response) {
-  response.pipe(concat(onconcat)).on('error', bail)
-}
+https.get('https://html.spec.whatwg.org/entities.json', (response) => {
+  response.pipe(concatStream(onconcat)).on('error', bail)
+})
 
 function onconcat(data) {
   const entities = {}
