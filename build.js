@@ -22,7 +22,11 @@ function onconcat(buf) {
 
   for (key in data) {
     if (own.call(data, key)) {
-      entities[key.slice(1, -1)] = data[key].characters
+      const name = key.slice(
+        1,
+        key.charAt(key.length - 1) === ';' ? -1 : undefined
+      )
+      entities[name] = data[key].characters
     }
   }
 
