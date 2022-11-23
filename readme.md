@@ -14,7 +14,8 @@ Map of named character references.
 *   [Install](#install)
 *   [Use](#use)
 *   [API](#api)
-    *   [characterEntities](#characterentities)
+    *   [`characterEntities`](#characterentities)
+*   [Data](#data)
 *   [Types](#types)
 *   [Compatibility](#compatibility)
 *   [Security](#security)
@@ -37,7 +38,7 @@ Even then, it might be better to use [`parse-entities`][parse-entities] or
 ## Install
 
 This package is [ESM only][esm].
-In Node.js (version 12.20+, 14.14+, 16.0+, 18.0+), install with [npm][]:
+In Node.js (version 14.14+, 16.0+), install with [npm][]:
 
 ```sh
 npm install character-entities
@@ -72,19 +73,23 @@ console.log(characterEntities.amp) // => '&'
 This package exports the identifier `characterEntities`.
 There is no default export.
 
-### characterEntities
+### `characterEntities`
 
-Mapping between (case-sensitive) character entity names to replacements.
+Map between (case-sensitive) character entity names to replacements.
+
+## Data
+
 See [`html.spec.whatwg.org`][html] for more info.
 
 ## Types
 
 This package is fully typed with [TypeScript][].
+It exports no additional types.
 
 ## Compatibility
 
 This package is at least compatible with all maintained versions of Node.js.
-As of now, that is Node.js 12.20+, 14.14+, 16.0+, and 18.0+.
+As of now, that is Node.js 14.14+ and 16.0+.
 It also works in Deno and modern browsers.
 
 ## Security
