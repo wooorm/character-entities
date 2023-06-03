@@ -1,9 +1,13 @@
 /**
  * @typedef Info
+ *   Datum.
  * @property {Array<number>} codepoints
+ *   Code points (such as `[120069]`).
  * @property {string} characters
+ *   Characters (such as `'\uD835\uDCC8'`).
  *
  * @typedef {Record<string, Info>} Result
+ *   Data.
  */
 
 import fs from 'node:fs/promises'
@@ -39,7 +43,8 @@ await fs.writeFile(
     ' *',
     ' * @type {Record<string, string>}',
     ' */',
-    'export const characterEntities = ' + JSON.stringify(entities, null, 2),
+    'export const characterEntities = ' +
+      JSON.stringify(entities, undefined, 2),
     ''
   ].join('\n')
 )
