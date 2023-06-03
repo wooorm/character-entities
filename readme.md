@@ -38,7 +38,7 @@ Even then, it might be better to use [`parse-entities`][parse-entities] or
 ## Install
 
 This package is [ESM only][esm].
-In Node.js (version 14.14+, 16.0+), install with [npm][]:
+In Node.js (version 16.0+), install with [npm][]:
 
 ```sh
 npm install character-entities
@@ -70,12 +70,14 @@ console.log(characterEntities.amp) // => '&'
 
 ## API
 
-This package exports the identifier `characterEntities`.
+This package exports the identifier
+[`characterEntities`][api-character-entities].
 There is no default export.
 
 ### `characterEntities`
 
-Map between (case-sensitive) character entity names to replacements.
+Map between (case-sensitive) character entity names to replacements
+(`Record<string, string>`).
 
 ## Data
 
@@ -89,7 +91,7 @@ It exports no additional types.
 ## Compatibility
 
 This package is at least compatible with all maintained versions of Node.js.
-As of now, that is Node.js 14.14+ and 16.0+.
+As of now, that is Node.js 16.0+.
 It also works in Deno and modern browsers.
 
 ## Security
@@ -98,11 +100,11 @@ This package is safe.
 
 ## Related
 
-*   [`wooorm/parse-entities`](https://github.com/wooorm/parse-entities)
-    — parse (decode) character references
-*   [`wooorm/stringify-entities`](https://github.com/wooorm/stringify-entities)
-    — serialize (encode) character references
-*   [`wooorm/character-entities-html4`](https://github.com/wooorm/character-entities-html4)
+*   [`parse-entities`](https://github.com/wooorm/parse-entities)
+    — decode character references
+*   [`stringify-entities`](https://github.com/wooorm/stringify-entities)
+    — encode character references
+*   [`character-entities-html4`](https://github.com/wooorm/character-entities-html4)
     — info on named character references in HTML 4
 *   [`character-reference-invalid`](https://github.com/wooorm/character-reference-invalid)
     — info on invalid numeric character references
@@ -132,9 +134,9 @@ See [How to Contribute to Open Source][contribute].
 
 [downloads]: https://www.npmjs.com/package/character-entities
 
-[size-badge]: https://img.shields.io/bundlephobia/minzip/character-entities.svg
+[size-badge]: https://img.shields.io/badge/dynamic/json?label=minzipped%20size&query=$.size.compressedSize&url=https://deno.bundlejs.com/?q=character-entities
 
-[size]: https://bundlephobia.com/result?p=character-entities
+[size]: https://bundlejs.com/?q=character-entities
 
 [npm]: https://docs.npmjs.com/cli/install
 
@@ -155,3 +157,5 @@ See [How to Contribute to Open Source][contribute].
 [stringify-entities]: https://github.com/wooorm/stringify-entities
 
 [html]: https://html.spec.whatwg.org/multipage/syntax.html#named-character-references
+
+[api-character-entities]: #characterentities
