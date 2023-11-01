@@ -27,10 +27,7 @@ let key
 
 for (key in data) {
   if (own.call(data, key)) {
-    const name = key.slice(
-      1,
-      key.charAt(key.length - 1) === ';' ? -1 : undefined
-    )
+    const name = key.slice(1, key.at(-1) === ';' ? -1 : undefined)
     entities[name] = data[key].characters
   }
 }
